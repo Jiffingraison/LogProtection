@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C66E9D0-A2C0-416F-A6D2-5F5CDD66255F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>encryption</RootNamespace>
+    <AssemblyName>encryption</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>encryption.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="crypter">
+      <HintPath>..\..\..\..\..\WORK ON 2012\crypter\crypter\bin\Debug\crypter.dll</HintPath>
+    </Reference>
+    <Reference Include="DBRemoting">
+      <HintPath>..\..\REMOTING\DBRemoting\DBRemoting\bin\Debug\DBRemoting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEmpDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmpDetails.Designer.cs">
+      <DependentUpon>AddEmpDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseConnection1.cs" />
+    <Compile Include="BigInteger.cs" />
+    <Compile Include="Brodcast_Recever.cs" />
+    <Compile Include="Brodcast_Sender.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="DeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEmployee.Designer.cs">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteFile.Designer.cs">
+      <DependentUpon>DeleteFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileBlockPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileBlockPermission.Designer.cs">
+      <DependentUpon>FileBlockPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDirectoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileDirectoryView.Designer.cs">
+      <DependentUpon>FileDirectoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileDownload.Designer.cs">
+      <DependentUpon>FileDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDownload1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileDownload1.Designer.cs">
+      <DependentUpon>FileDownload1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSharePermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileSharePermission.Designer.cs">
+      <DependentUpon>FileSharePermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PManagerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PManagerHome.Designer.cs">
+      <DependentUpon>PManagerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMEncryptFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMEncryptFile.Designer.cs">
+      <DependentUpon>PMEncryptFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RSAEncryption.cs" />
+    <Compile Include="StudentMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMessage.designer.cs">
+      <DependentUpon>StudentMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uploadImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uploadImage.designer.cs">
+      <DependentUpon>uploadImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Channel\ChannelInfo.cs" />
+    <Compile Include="Channel\FTClientCode.cs" />
+    <Compile Include="Channel\FTServerCode.cs" />
+    <Compile Include="ClientAdvertise.cs" />
+    <Compile Include="DataLayer\BaseConnection.cs" />
+    <Compile Include="DataLayer\videoconnection.cs" />
+    <Compile Include="DBcon.cs" />
+    <Compile Include="EncryptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptForm.designer.cs">
+      <DependentUpon>EncryptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptionLib\AES.cs" />
+    <Compile Include="EncryptionLib\AESProvider.cs" />
+    <Compile Include="EncryptionLib\ICipher.cs" />
+    <Compile Include="KeyMerging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyMerging.designer.cs">
+      <DependentUpon>KeyMerging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalParameter.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TSReceiver.cs" />
+    <Compile Include="TsSender.cs" />
+    <EmbeddedResource Include="AddEmpDetails.resx">
+      <DependentUpon>AddEmpDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEmployee.resx">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFile.resx">
+      <DependentUpon>DeleteFile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileBlockPermission.resx">
+      <DependentUpon>FileBlockPermission.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDirectoryView.resx">
+      <DependentUpon>FileDirectoryView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDownload.resx">
+      <DependentUpon>FileDownload.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDownload1.resx">
+      <DependentUpon>FileDownload1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSharePermission.resx">
+      <DependentUpon>FileSharePermission.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PManagerHome.resx">
+      <DependentUpon>PManagerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMEncryptFile.resx">
+      <DependentUpon>PMEncryptFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMessage.resx">
+      <DependentUpon>StudentMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uploadImage.resx">
+      <DependentUpon>uploadImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncryptForm.resx">
+      <DependentUpon>EncryptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyMerging.resx">
+      <DependentUpon>KeyMerging.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reg.resx">
+      <DependentUpon>reg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reg.Designer.cs">
+      <DependentUpon>reg.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Encryption_by_Cheezydog22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Client.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonds-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-medical.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prescription-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prescription-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mining.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transfer-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MF_Cloud_Carousel_Hero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-coin-in-hand-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-approval-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-message-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-message-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trust-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-download-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rejected-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-file-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-file-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-file-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-download-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manager-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cybersecurity-icon-1-700x420.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\234518317.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cybersecurity-icon-1-700x4201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230519_135133_226.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230519_135132_395.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230519_135132_3951.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20230519_135132_3952.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
